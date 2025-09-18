@@ -3,7 +3,10 @@ import numpy as np
 import pandas as pd
 import re
 import joblib
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
+
 
 # --- Load model and vectorizers ---
 model = joblib.load("logreg_tfidf_model.joblib")
@@ -136,4 +139,5 @@ st.markdown(
         <a href="https://github.com/AdiSinghCodes" target="_blank">GitHub</a>
     </div>
     """, unsafe_allow_html=True
+
 )
